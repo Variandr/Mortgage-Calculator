@@ -44,7 +44,6 @@ export const deleteBank = bankId => dispatch => {
     }
 }
 export const updateBank = bank => dispatch => {
-    console.log(bank)
     let banks = JSON.parse(localStorage.getItem('banks'))
     if (banks) {
         let updatedBanks = banks.map(b => {
