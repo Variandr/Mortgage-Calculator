@@ -4,10 +4,15 @@ import {Navigate, NavLink, Route, Routes} from "react-router-dom"
 import {BsBank2, BsFillCalculatorFill} from "react-icons/bs"
 import ManagementPage from "./content/management/managementPage"
 import CalculatorPage from "./content/calculator/calculatorPage"
+import {useDispatch} from "react-redux"
+import {useEffect} from "react"
+import {getBanks} from "./state/management-reducer"
 
-const {Header, Content, Footer} = Layout
+const {Header, Content} = Layout
 
 let App = () => {
+    let dispatch = useDispatch()
+    useEffect(() => dispatch(getBanks()), [])
     return <Layout className="layout">
         <Header>
             <Menu theme="dark" mode="horizontal"
@@ -28,7 +33,6 @@ let App = () => {
                 <Route path='*' element={<div className='center'><h1>404 Page not found</h1></div>}/>
             </Routes>
         </Content>
-        <Footer style={{textAlign: 'center'}}>Created by Variandr</Footer>
     </Layout>
 }
 

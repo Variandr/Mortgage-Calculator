@@ -1,7 +1,7 @@
 import {Button, Form, Input, InputNumber} from "antd";
 
 const AddBankForm = ({toggleForm, setBank}) => {
-    return <Form name="addBank" labelCol={{span: 8}} wrapperCol={{span: 4}} initialValues={{remember: true}}
+    return <Form name="addBank" labelCol={{span: 8}} wrapperCol={{span: 4}}
                  onFinish={(data) => {
                      setBank(data)
                      toggleForm(true)
@@ -28,6 +28,7 @@ const AddBankForm = ({toggleForm, setBank}) => {
         </Form.Item>
         <Form.Item wrapperCol={{offset: 8, span: 16}}>
             <Button type="primary" htmlType="submit">Submit</Button>
+            <Button onClick={() => toggleForm(true)}>Cancel</Button>
         </Form.Item>
     </Form>
 }
