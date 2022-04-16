@@ -5,10 +5,10 @@ const BankItemEdit = (props) => {
     let [bankData, setBankData] = useState({
         id: props.id,
         name: props.name,
-        interestRate: props.interestRate,
-        maximumLoan: props.maximumLoan,
-        minimumDownPayment: props.minimumDownPayment,
-        loanTerm: props.loanTerm
+        interestRate: props.interest_rate,
+        maximumLoan: props.maximum_loan,
+        minimumDownPayment: props.minimum_down_payment,
+        loanTerm: props.loan_term
     })
     return <div className='item-box'>
         <div className='item-info'>

@@ -12,7 +12,9 @@ const {Header, Content} = Layout
 
 let App = () => {
     let dispatch = useDispatch()
-    useEffect(() => dispatch(getBanks()), [])
+    useEffect(() => {
+        dispatch(getBanks())
+    }, [])
     return <Layout className="layout">
         <Header>
             <Menu theme="dark" mode="horizontal"

@@ -8,4 +8,4 @@ router.post('/', [
     check('payment', 'Field can not be empty').notEmpty(),
     check('bank', 'Field can not be empty').notEmpty()
 ], controller.Calculate)
-module.exports = router;
+module.exports = router

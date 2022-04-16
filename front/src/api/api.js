@@ -3,14 +3,26 @@ import axios from "axios";
 const instance = axios.create({
     baseURL: `http://localhost:5000/api/`,
     withCredentials: true,
-    headers: {
-    }
+    headers: {}
 })
 
+export const BankAPI = {
+    getBanks() {
+        return instance.get('banks').then(res => res.data)
+    },
+    addBank(bank) {
+        return instance.post('banks/add', {...bank}).then(res => res.data)
+    },
+    updateBank(bank) {
+        return instance.patch('banks/update', {...bank}).then(res => res.data)
+    },
+    deleteBank(bankId) {
+        return instance.delete(`banks/delete/${bankId}`).then(res => res.data)
+    }
+}
 
 export const CalculatorAPI = {
     getMortgagePayment(calcData) {
-        console.log(calcData)
-        return instance.post('calculate/', {calcData}).then(res => res.data)
+        return instance.post('calculate', {...calcData}).then(res => res.data)
     }
 }
