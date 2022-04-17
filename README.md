@@ -2,7 +2,9 @@
 
 Simple application for calculation monthly payments
 
-Server deployed on heroku [HERE](https://dry-dusk-68389.herokuapp.com/api/)
+Frontend deployed on github pages [HERE](https://variandr.github.io/Mortgage-Calculator)
+
+Server deployed on heroku [HERE](https://damp-ocean-10748.herokuapp.com/api/)
 
 App was created using:
 
