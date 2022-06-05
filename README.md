@@ -1,4 +1,4 @@
-# Mortgage Calculator(React+Redux+NodeJS+PostgreSQL)
+# Mortgage Calculator
 
 Simple application for calculation monthly payments
 
